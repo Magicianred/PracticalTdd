@@ -9,6 +9,7 @@ namespace tests
     {
         [Theory]
         [InlineData("1-1,1-1,1-1,1-1,1-1,1-1,1-1,1-1,1-1,1-1", "2,2,2,2,2,2,2,2,2,2", "20")] // All open frames
+        [InlineData("10,10,10,10,10,10,10,10,10,10-10-10", "30,30,30,30,30,30,30,30,30,30", "300")] // All strikes
         public void RunningTheProgram_WithGivenInputString_WillWriteTheOutput_InTheConsole(string rolls, string expectedScoreByFrame, string expectedTotalScore)
         {
             using(StringWriter sw = new StringWriter())
